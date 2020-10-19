@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> HOGWARTS: :ContactUs </title>
+<link rel="icon" type="image/png" href="contact us.ico"/>
+<style>
+*{
+margin:0;
+padding:0;
+font-family:verdana;
+transition:0.7s all;
+}
+#main{
+width:100%;
+height:100vh;
+}
+
+body{
+background-image:url("atmosphere-background-bright-19670.jpg");
+background-position:center;
+background-attachment:fixed;
+background-size:100%;
+background-repeat:no-repeat;
+}
+nav{
+width:100%;
+height:130px;
+background-color:#696979;
+line-height:130px;
+opacity:0.9;
+position:fixed;
+<!-- background-color:#098; -->
+}
+nav > ul{
+float:right;
+margin-right:10px;
+}
+nav > ul > li{
+list-style-type:none;
+display: inline-block;
+transition:0.5s;
+}
+nav>ul>li:hover{
+background-color:black;
+cursor:pointer;
+font-size:23px;
+transition:0s;
+<!-- background-color:#f39d1a; -->
+}
+nav>ul>li>a{
+text-decoration:none;
+color:#fff;
+padding:23px;
+}
+
+#image { 
+border-radius:50%;
+border:0.9px solid black;
+margin-left:20px;
+margin-right:20px;
+float:left;
+cursor:pointer;
+}
+#image:hover{
+padding:30px;
+}
+p:hover{ padding:10px; }
+.grid-container > div { 
+color:white;
+font-family:cursive;
+text-align:center; }
+#logo:hover{ cursor:pointer; padding:5px; }
+.query{
+margin-top:-500px;
+margin-left:20px; margin-right:20px;margin-bottom:50px;
+font-family:verdana;
+background-color:#896768;
+font-size:30px;
+}
+.query > center > p{
+color:#000;
+}
+
+#feedback{
+padding-left:10px;
+text-align:left;
+margin:20px;
+margin-left:20px;
+border-radius:50px;
+background-color:#f1d8e9;
+}
+#feedback > form{
+font-family:verdana;
+font-size:30px;
+margin-left:130px;
+}
+#feedback > form > #gender{
+text-align:left;
+}
+#f{
+width:20px;
+height:20px;
+}
+#e{
+width:1000px;
+height:30px;
+}
+textarea {
+width:1000px;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+<div id="main">
+<nav>
+<img id="logo" src="hogwarts.png"width="250"height="130"style="border-radius:100%">
+<ul>
+<li><a href="homehome.html"> Home </a></li>
+<li><a href="aboutus.html"> AboutUs </a></li>
+<li><a href="err.html"> Courses </a></li>
+<li><a href="err.html"> Admissions </a></li>
+<li><a href="login (1).html"> Login </a></li>
+<li><a href="err.html"> Faculty </a></li>
+<li><a href="events.html"> Events </a></li>
+<li><a href="contactus.html"> ContactUs </a></li>
+</ul></nav></div>
+<center>
+<div id="welcome" style="border-radius:35px;margin-top:-450px;font-size:40px;font-weight:bold;background:black;width:70%;color:#fff;"> WELCOME TO HOGWARTS! 
+</div><br>
+<div class="query" style="border-radius:50px;">
+<center>
+<h2 style="color:#000;font-size:60px;margin-top:550px;"> Do you have any queries? </h2>
+<p> We're grateful for you having spared your valuable time on our website! We'd really appreciate if you leave us a feedback <img src="emoji-icon-04-512.png"width="30px"height="30px"> !</p><br>
+</div>
+<center>
+<div id="feedback"><br><br>
+<img src="feedback.jpeg"width="80%"height="100%" style="margin-left:120px;"><br><br>
+<form action="" onsubmit="return(validate())" method="post">
+<p><b style="color:#009;"><i>Name:</i></b><br>
+<input id="e" type="text"value=""maxlength="20"placeholder="Name"id="1"> <br><br>
+<b style="color:#009;"><i>Contact Number:</i></b><br>
+<input id="e" type="text"value=""maxlength="10"placeholder="Phone"id="2"> <br><br>
+<b style="color:#009;"><i>e-Mail ID:</i></b><br>
+<input id="e" type="text"value=""maxlength="20"placeholder="Mail ID"id="3"> <br><br>
+<b id="gender" style="color:#009;"><i>Gender:</i></b><br>
+<input id="f"type="radio"value="M"name="gender"><b style="color:black;"> M </b><br>
+<input id="f"type="radio"value="F"name="gender"><b style="color:black;"> F </b><br>
+<input id="f"type="radio"value="O"name="gender"><b style="color:black;"> O </b><br><br></p>
+<b style="color:#009;"><i>Comments:</i></b><br>
+<textarea rows="10" cols="50" placeholder="Comments(if any)"></textarea>
+<br><br>
+<input id="e" type="submit" value="Submit"><br><br></center>
+</form></div>
+<script>
+function sub(){
+alert("Thank you! Your form has been submitted successfully. :)");
+}
+function validate(){
+	if(document.getElementById("1").value==""){
+		alert("Please provide your name!");
+		document.getElementById("1").focus();
+		return false;
+	}
+	a=document.getElementById("2").value
+	if(a==""||a.length!=10||isNaN(a))
+	{
+		alert("Please provide valid phone number");
+		document.getElementById("2").focus();
+		return false;
+	}
+	x=document.getElementById("3").value
+	var atpos=x.indexOf("@");
+	var dotpos=x.indexOf(".");
+	var dotposLast=x.lastIndexOf(".");
+	if(x==""||atpos<1||dotpos<=atpos+2||dotposLast+2>=x.length)
+	{
+		alert("Please provide correct email ID!");
+		document.getElementById("3").focus();
+		return false;
+	}
+	sub();
+}
+</script>
+
+
+<div class="contus" style="background-color:#0988;border-radius:50px;margin-top:60px;margin-left:20px; margin-right:20px;margin-bottom:50px;">
+<div class="item5">
+<div class="im">
+<center><br><br><br><br>
+<div class="txti">
+<div style="color:green;font-size:50px;text-align:center;margin-top:-20px;"> CONTACT US: </div> <br><br>
+<h4 style="color:black;text-align:center-left;font-size:20px;"><img src="downloade.png"width="20px"height="20px"><b>  Mail us: </b></h4>
+<a href="https://www.gmail.com/" style="color:red;font-size:20px;text-align:left;"> hogwarts-official2k17@gmail.com </a> <br><br>
+<h4 style="color:black;text-align:center-left;font-size:20px"><img src="Phone-12-512.png"width="20px"height="20px"> Tring tring: </b></h4>
+<div style="color:maroon;text-align:center-left;font-size:20px"> 407-423-9018 </div><br>
+<h4 style="color:black;text-align:center-left;font-size:20px"><img src="img_509391.png"width="20px"height="20px"><b> Where to find us? </b></h4>
+<div style="color:maroon;text-align:center-left;font-size:20px"> 910.016.2141 | 610.952.1398 <br>
+5600 Lake Underhill Rd.<br>Orlando, FL 32807	</div><br><br>
+<h4 style="color:black;font-size:20px;"><img src="best-of-create-logo-with-transparent-background-online-internet-access-in-kalikot-village-nepali-headlines-create-logo-with-transparent-background-online.png"width="30px"height="30px"><b> Social links: </b></h4><br>
+<div class="lnks" style="background-color:#27f7;border-radius:20%;margin-left:300px;margin-right:300px;padding-right:1px;">
+<b style="height="30px">|</b><a href="https://www.facebook.com"> <img id="1" src="facebook.png" width="30px" height="30px"> </a><b style="height=30px">|</b>
+<a href="https://www.twitter.com"><img id="2" src="twitter.png" width="30px" height="30px"></a><b style="height="30px">|</b>
+<a href="https://www.linkedin.com"><img id="3" src="linkedin.png" width="30px" height="30px"></a><b style="height="30px">|</b>
+<a href="https://www.instagram.com"><img id="4" src="insta.png" width="30px" height="30px"></a><b style="height="30px">|</b>
+<a href="https://play.google.com/store/apps/details?id=com.whatsapp"><img id="5" src="download.jpg" width="30px" height="30px"></a><b style="height="30px">|</b>
+<a href="https://play.google.com/store/apps/details?hl=en&id=com.snapchat.android&referrer=mat_click_id%3D7c555e3f45c1e1c9cc3a30573f9faa95-20180416-198194"><img id="6" src="snapchat.png" width="30px" height="30px"></a><b style="height="30px">|</p>
+</div></div>
+<center><img src="advertisement-advertising-font-519.jpg" width="90%" height="100%" style="margin-top:50px;"> <br><br></center>
+<h5 style="color:white;border-radius:35px;margin:10%;font-size:15px;font-weight:bold;background:black;text-align:center-right;background-size:10px;width:50%;"> © HOGWARTS University &nbsp </h5><br>
+</div></div></center></div>
+</div>
+
+<script>
+function confirmlogout(){
+var a
+a=confirm("Are you sure you want to logout?");
+if(a){
+window.open("login (1).html");
+alert("You have logged out successfully!");
+}
+}
+</script>
+</body></html>

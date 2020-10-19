@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> HOGWARTS: :HOME </title>
+<link rel="icon" type="image/png" href="home.ico"/>
+<style>
+*{
+margin:0;
+padding:0;
+font-family:verdana;
+transition:0.7s all;
+}
+body{
+background-image:url("atmosphere-background-bright-19670.jpg");
+background-position:center;
+background-attachment:fixed;
+background-size:100%;
+background-repeat:no-repeat;
+}
+#main{
+width:100%;
+height:100vh;
+}
+
+nav{
+width:100%;
+height:130px;
+background-color:#696979;
+line-height:130px;
+opacity:0.9;
+position:fixed;
+<!-- background-color:#098; -->
+}
+nav > ul{
+float:right;
+margin-right:10px;
+}
+nav > ul > li{
+list-style-type:none;
+display: inline-block;
+transition:0.5s;
+}
+nav>ul>li:hover{
+background-color:black;
+cursor:pointer;
+font-size:23px;
+transition:0s;
+<!-- background-color:#f39d1a; -->
+}
+nav>ul>li>a{
+text-decoration:none;
+color:#fff;
+padding:23px;
+}
+.slideshow-container{
+width:99%;
+height:550px;
+border:1px solid white;
+margin-top:10px;
+background:#000;
+border-radius:4%;
+}
+.slideshow-container>img{
+	width:99%;
+	height:550px;
+	border-radius:3%;
+	<!-- position:absolute; -->
+}
+.btn{
+	position:relative;
+	width:50px;
+	height:50px;
+	border:none;
+	border-radius:25px;
+	top:-250px;
+	background:black;
+	color:white;
+	font-size:20px;
+}
+
+.btno{
+	position:absolute;
+	width:50px;
+	height:50px;
+	border:none;
+	border-radius:25px;
+	top:300px;
+	background:black;
+	color:white;
+	font-size:20px;
+}
+#btn1:hover{
+	cursor:pointer;
+	width:55px;
+	height:55px;
+	background-color:white;
+	color:#000;
+	box-shadow: -20px 10px 20px 5px fade;
+}
+#btn2:hover{
+cursor:pointer;
+width:55px;
+	height:55px;
+	background-color:white;
+	color:#000;
+	box-shadow: 20px 10px 20px 5px fade;
+}
+#btn1{
+	position:relative;
+	float:left;
+}
+#btn2{
+	position:relative;
+	float:right;
+}
+.abt_univ{
+background-color:#e7e7e9;
+border-radius:2%;
+margin-top:20px;
+float:center;
+}
+#image { 
+border-radius:50%;
+border:0.9px solid black;
+margin-left:20px;
+margin-right:20px;
+float:left; 
+cursor:pointer;
+}
+#image:hover{
+padding:30px;
+}
+p:hover{ padding:10px; }
+.grid-container > div { 
+color:white;
+font-family:cursive;
+text-align:center; }
+
+.imgs{
+background-color:#FFD736;
+margin:10px;
+padding:10px;
+border:3px solid black;
+border-radius:20px;
+display:grid;
+grid-gap:10px;
+grid-template-areas:
+'left centleft centright right';
+<!-- background-color:#0909; -->
+}
+.im1{grid-area:left;
+border-radius:50%;
+padding:5px;
+}
+.im2{grid-area:centleft;
+border-radius:50%;
+padding:5px;
+}
+.im3{grid-area:centright;
+border-radius:50%;
+padding:5px;
+}
+.im4{grid-area:right;
+border-radius:50%;
+padding:5px;
+}
+.alumni:hover{
+cursor:pointer;
+}
+.coursesoff{
+display:grid;
+grid-template-areas:
+'op op pop pop tub tub';
+margin:10px;
+padding-top:25px;
+text-align:center;
+float:center;
+font-style:italic;
+grid-gap:10px;
+}
+.item2 {grid-area: op; padding:20px; background-color:#000; float:left; border-radius:20px;}
+.item2:hover{
+cursor:pointer;
+padding:50px 0px 50px 0px;
+background-color:#0009;
+}
+.item3 {grid-area: pop; padding:20px; background-color:RoyalBlue;float:center; border-radius:20px;}
+.item3:hover{
+cursor:pointer;
+padding:50px 0px 50px 0px;
+background-color:#0689;
+}
+.item4 {grid-area: tub; padding:20px; background-color:YellowGreen;float:right; border-radius:20px;}
+.item4:hover{
+cursor:pointer;
+padding:50px 0px 50px 0px;
+background-color:#0f79;
+}
+#a {
+color:#761804;
+width:75%;
+padding:20px;
+background-color:white;
+}
+.course{margin-left:250px;;}
+.course:hover{ 
+font-size:35px;
+background-color:#fff9;
+}
+
+.coursesoff > div > a{
+color:#761804;
+font-size:30px;
+font-style:italic;
+float:center; }
+}
+
+.contus{
+background-color:white;
+width:225%;
+height:500px;
+}
+
+.item5:hover{
+cursor:pointer;
+padding:80px;
+background-color:86f5a3;
+}
+.abt_univ:hover{cursor:pointer; padding:50px;}
+#welcome:hover{ cursor:pointer; padding:20px;}
+#logo:hover{ cursor:pointer; padding:2px; }
+#tt{
+	text-align:left;
+	float:right;
+}
+#1:hover{
+	height:5%;
+	width:5%;
+}
+#kuchbhidede{
+padding-top:5%;
+margin-top:80px;
+font-size:30px;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+<div id="main">
+<nav>
+<img id="logo" src="hogwarts.png"width="250"height="130"style="border-radius:100%;float:left;">
+<ul>
+<li><a href="homehome.html"> Home </a></li>
+<li><a href="aboutus.html"> AboutUs </a></li>
+<li><a href="err.html"> Courses </a></li>
+<li><a href="err.html"> Admissions </a></li>
+<li><a href="login (1).html"> Login </a></li>
+<li><a href="err.html"> Faculty </a></li>
+<li><a href="events.html"> Events </a></li>
+<li><a href="contactus.html"> ContactUs </a></li>
+
+</ul></nav></div>
+<center>
+<div id="welcome" style="border-radius:35px;margin-top:-450px;font-size:40px;font-weight:bold;background:black;width:70%;color:#fff;"> WELCOME TO HOGWARTS! 
+</div><br>
+	<div class="slideshow-container">
+		<img class="mySlides" src="80873.alfabetajuega-colegio-hogwarts-170914.jpg">
+		<img class="mySlides" src="background.jpg">
+		<img class="mySlides" src="classroom.jpeg">
+		<img class="mySlides" src="library2.jpeg">
+		<img class="mySlides" src="church.jpeg">
+		<img class="mySlides" src="bleh.jpeg">
+		<img class="mySlides" src="pexels-photo.jpg">
+		<img class="mySlides" src="students passtime.jpeg">
+		<img class="mySlides" src="girls_hostel.jpg">
+		<img class="mySlides" src="comp_labs.jpeg">
+		<img class="mySlides" src="events.jpeg">
+		<img class="mySlides" src="boys_hostel.jpg">
+		<img class="mySlides" src="alumni.jpeg">
+		<button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+		<button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;</button>
+	</div><br></center>
+<script>
+var index=1;
+function plusIndex(n){
+	index = index + n;
+	showImage(index);
+}
+showImage(1);
+function showImage(n){
+	var i;
+	var x=document.getElementsByClassName("mySlides");
+	if(n > x.length){ index = 1 };
+	if(n < 1){ index = x.length };
+	for(i=0;i<x.length;i++){
+		x[i].style.display="none";
+	}
+	x[index-1].style.display="block";
+}
+autoSlide();
+function autoSlide(){
+	var i;
+	var x=document.getElementsByClassName("mySlides");
+	for(i=0;i<x.length;i++){
+		x[i].style.display="none";
+	}
+	if(index>x.length){ index = 1 };
+	x[index-1].style.display="block";
+	index++;
+	setTimeout(autoSlide,3000);
+}
+function confirmlogout(){
+var a
+a=confirm("Are you sure you want to logout?");
+if(a){
+window.open("login (1).html");
+alert("You have logged out successfully!");
+}
+}
+</script>
+
+<div class="abt_univ"><center><br>
+<h1 style="color:#000;"><img id="image" src="20121103-MichaelWilson0122-smaller.jpg"width="350px"height="370px"> <br><br>From the Chancellor's Desk: </h1>
+<br><p style="margin:30px;font-size:20px;color:#000;"><br><i>HOGWARTS university, situated in Orlando, was established in 2017, highly inspired from Hogwarts School Of Witchcraft and Wizardry, and is the primary setting for the first six books in J.K. Rowling's Harry Potter series.. Our university aims at molding students practically in a way that the society may not accept. <br><br> Looking for career-focused education in Orlando and the surrounding area?<br>
+<a href="aboutus.html" style="color:black;float:center;margin-right:10px;text-decoration:none;"><b>Explore.. </b></a><br><br><br></center>
+</div>
+
+<div class="alumni"><center><br>
+<img src="alumni.png"><br>
+<div class="imgs">
+<p style="color:#000;border-radius:50%;"><br><img id="image" class="im1" src="1person.jpeg"width="250px"height="200px"><br><br><br><br><br><b>Lake Eye Associates.</b></p>
+<p style="color:#000;border-radius:50%;"><br><img id="image" class="im2" src="Lq2psq841co.jpg"width="250px"height="200px"><br><br><br><br><br><b>Actor.</b></p>
+<p style="color:#000;border-radius:50%;"><br><img id="image" class="im3" src="person 2.jpeg"width="250px"height="200px"><br><br><br><br><br><b>Apple.Inc</b></p>
+<p style="color:#000;border-radius:50%;"><br><img id="image" class="im4" src="person.jpeg"width="250px"height="200px"><br><br><br><br><br><b>Microsoft</b></p>
+</div></center></div>
+
+<button class="course" style="border-radius:35px;margin-top:10%;font-size:25px;font-weight:bold;background-color:RosyBrown;width:70%;padding:20px;"> Courses offered: </button><br>
+<div class="coursesoff">
+<div class="item2">
+<center><br><br><br><br>
+<div id="a"> <p><b> Concept Illustrations </b></p> <br>
+<img style="margin-left:15%;margin-top:10%;" id="image"src="HogwartsCastle_WB_F1_HogwartsCastlePencilIllustration_Illust_100615_Land.jpg"width="200px"height="200px"> <br><br>
+<br><p style="padding-top:80%; text-align:justify;"> Concept art is a form of illustration used to convey an idea for use in films, video games, animation, comic books, or other media before it is put into the final product. We believe that this course would help nurture the students' imaginative mind!</p><br>
+<a href="courses.html" style="text-decoration:none; color:#000;font-family:arial black;"> Know more.. </a>
+</div>
+</center>
+</div>
+
+<div class="item3">
+<center>
+<br><div id="a"> <p><b> Aesthetics/Magic </b></p> <br>
+<img style="margin-left:15%;margin-top:10%;"id="image"src="50d680a4b39d66f9ac5fcf92049f0c59.jpg"width="200px"height="200px"> <br><br>
+<p style="padding-top:80%; text-align:justify;"> Aesthetics is a branch of philosophy that explores the nature of art, beauty, and taste, with the creation and appreciation of beauty. Magic is the ability to use paranormal methods to manipulate supernatural forces. We believe in art & goodwill..</p><br>
+<a href="courses.html" style="font-family:arial black; text-decoration:none; color:#RoyalBlue;"> Know more.. </a>
+</div>
+</center>
+</div>
+
+<div class="item4">
+<center><br><br><br><br>
+<div id="a"> <p><b> Engineering </b></p> <br>
+<img style="margin-left:15%;margin-top:10%;" id="image"src="ME-Re-engineering-Houston_hero.jpg"width="200px"height="200px"><br><br>
+<p style="padding-top:80%; text-align:justify;"> It is the branch of science and technology concerned with the design, building, and use of engines, machines, and structures. We mold students in way; they be able to make their own creations that interests to them, by implementing the techniques learnt here..</p>
+<br><a href="courses.html" style="text-decoration:none; color:YellowGreen;font-family:arial black;"> Know more.. </a>
+</div>
+
+</center>
+</div>
+</div>
+
+<div class="contus" style="background-color:#f5deb3;margin-top:80px;margin-left:5px;margin-right:5px;">
+<div class="item5">
+<div class="im">
+<center><br><br><br><br>
+<div class="txti" style="font-family:forte;">
+<div style="color:coffee;font-size:50px;text-align:center;margin-top:-20px;margin-left:0px;font-family:forte;"><b style="font-family:forte;font-style:no-italic;"> CONTACT US: </b></div>
+<div id="kuchbhidede"><b> Total number of visits: <br> 8,09,98,23,40,568+ </div></b>
+<div id="tt"> <h4 style="color:black;font-size:20px;margin-top:-175px;font-family:forte;"><img src="downloade.png"width="20px"height="20px"><b style="font-family:forte;">  Mail us: </b></h4>
+<a href="https://www.gmail.com/" style="color:red;font-size:20px;"> hogwarts-official2k17@gmail.com </a> <br><br>
+<h4 style="color:black;font-size:20px;font-family:forte;"><img src="Phone-12-512.png"width="20px"height="20px"> Tring tring: </b></h4>
+<div style="color:maroon;font-size:20px;"> 407-423-9018 </div><br>
+<h4 style="color:black;font-size:20px;"><img src="img_509391.png"width="20px"height="20px"><b style="font-family:forte;"> Where to find us? </b></h4>
+<div style="color:maroon;font-size:20px"> 910.016.2141 | 610.952.1398 <br>
+5600 Lake Underhill Rd.<br>Orlando, FL 32807	</div><br><br> </div>
+<h4 style="color:black;font-size:20px;float:left;margin-left:13%;margin-top:-75px;"><img src="best-of-create-logo-with-transparent-background-online-internet-access-in-kalikot-village-nepali-headlines-create-logo-with-transparent-background-online.png"width="30px"height="30px"><b style="font-family:forte;"> Social links: </b></h4><br><br>
+<div class="lnks" style="margin-left:10%;padding-right:1px; float:left; margin-top:-65px;">
+<b style="height=30px">|</b><a href="https://www.facebook.com/"> <img id="1" src="facebook.png" width="30px" height="30px"> </a><b style="height=30px">|</b>
+<a href="https://www.twitter.com"><img id="2" src="twitter.png" width="30px" height="30px"></a><b style="height="30px">|</b>
+<a href="https://www.linkedin.com"><img id="3" src="linkedin.png" width="30px" height="30px"></a><b style="height="30px">|</b>
+<a href="https://www.instagram.com"><img id="4" src="insta.png" width="30px" height="30px"></a><b style="height="30px">|</b>
+<a href="https://play.google.com/store/apps/details?id=com.whatsapp"><img id="5" src="download.jpg" width="30px" height="30px"></a><b style="height="30px">|</b>
+<a href="https://play.google.com/store/apps/details?hl=en&id=com.snapchat.android&referrer=mat_click_id%3D7c555e3f45c1e1c9cc3a30573f9faa95-20180416-198194"><img id="6" src="snapchat.png" width="30px" height="30px"></a><b style="height="30px">|</p>
+</div></div><br>
+<h5 style="color:white;border-radius:35px;margin-top:3%;font-size:15px;font-weight:bold;background:black;text-align:center-right;background-size:10px;width:50%;"> © HOGWARTS University &nbsp </h5><br>
+</div></div></center></div>
+
+</div></body></html>

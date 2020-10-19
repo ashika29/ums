@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> HOGWARTS: :Events </title>
+<link rel="icon" type="image/png" href="gallery2.ico"/>
+<style>
+*{
+margin:0;
+padding:0;
+font-family:verdana;
+transition:0.7s all;
+}
+#main{
+width:100%;
+height:100vh;
+}
+body{
+background-image:url("atmosphere-background-bright-19670.jpg");
+background-position:center;
+background-attachment:fixed;
+background-size:100%;
+background-repeat:no-repeat;
+}
+
+nav{
+width:100%;
+height:130px;
+background-color:#696979;
+line-height:130px;
+opacity:0.9;
+position:fixed;
+<!-- background-color:#098; -->
+}
+nav > ul{
+float:right;
+margin-right:10px;
+}
+nav > ul > li{
+list-style-type:none;
+display: inline-block;
+transition:0.5s;
+}
+nav>ul>li:hover{
+background-color:black;
+cursor:pointer;
+font-size:23px;
+transition:0s;
+<!-- background-color:#f39d1a; -->
+}
+nav>ul>li>a{
+text-decoration:none;
+color:#fff;
+padding:23px;
+}
+#image { 
+border-radius:50%;
+border:0.9px solid black;
+margin-left:20px;
+margin-right:20px;
+float:left;
+cursor:pointer;
+}
+#image:hover{
+padding:30px;
+}
+p:hover{ padding:10px; }
+.grid-container > div { 
+color:white;
+font-family:cursive;
+text-align:center; }
+#logo:hover{ cursor:pointer; padding:5px; }
+
+.slideshow-container{
+width:99%;
+height:550px;
+border:1px solid white;
+margin-top:10px;
+background:#000;
+border-radius:4%;
+}
+.slideshow-container>img{
+	width:99%;
+	height:550px;
+	border-radius:3%;
+	<!-- position:absolute; -->
+}
+.btn{
+	position:relative;
+	width:50px;
+	height:50px;
+	border:none;
+	border-radius:25px;
+	top:-250px;
+	background:black;
+	color:white;
+	font-size:20px;
+}
+
+.btno{
+	position:absolute;
+	width:50px;
+	height:50px;
+	border:none;
+	border-radius:25px;
+	top:300px;
+	background:black;
+	color:white;
+	font-size:20px;
+}
+#btn1:hover{
+	cursor:pointer;
+	width:55px;
+	height:55px;
+	background-color:white;
+	color:#000;
+	box-shadow: -20px 10px 20px 5px fade;
+}
+#btn2:hover{
+cursor:pointer;
+width:55px;
+	height:55px;
+	background-color:white;
+	color:#000;
+	box-shadow: 20px 10px 20px 5px fade;
+}
+#btn1{
+	position:relative;
+	float:left;
+}
+#btn2{
+	position:relative;
+	float:right;
+}
+#welcome:hover{ cursor:pointer; padding:20px;}
+#logo:hover{ cursor:pointer; padding:2px; }
+#logo{
+margin-left:-150px;
+}
+.column2 {
+    float: left;
+    padding-left: 150px;
+    padding-right: 20px;
+		  width: 33.3%;
+}
+#a1
+{
+  border: 4px solid white;
+  padding:10px;
+  width:120%;
+  height: 100%;
+  box-shadow: 4px;
+  transition: transform .2s;
+  margin: 50px;
+}
+.row{
+width:80%;
+}
+.column {
+    float: left;
+    padding: 30px;
+	    padding-right: 60px;
+		  width: 33.3%;
+}
+img:hover {
+cursor:pointer;
+}
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+		font-size: 40px;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+<div id="main">
+<nav>
+<img id="logo" src="hogwarts.png"width="250"height="130"style="border-radius:100%">
+<ul>
+<li><a href="homehome.html"> Home </a></li>
+<li><a href="aboutus.html"> AboutUs </a></li>
+<li><a href="err.html"> Courses </a></li>
+<li><a href="err.html"> Admissions </a></li>
+<li><a href="login (1).html"> Login </a></li>
+<li><a href="err.html"> Faculty </a></li>
+<li><a href="events2.html"> Events </a></li>
+<li><a href="contactus.html"> ContactUs </a></li>
+</ul></nav></div>
+<center>
+<div id="welcome" style="border-radius:35px;margin-top:-450px;font-size:40px;font-weight:bold;background:black;width:70%;color:#fff;"> WELCOME TO HOGWARTS! 
+</div><br>
+	<div class="slideshow-container">
+		<img class="mySlides" src="80873.alfabetajuega-colegio-hogwarts-170914.jpg">
+		<img class="mySlides" src="background.jpg">
+		<img class="mySlides" src="classroom.jpeg">
+		<img class="mySlides" src="library2.jpeg">
+		<img class="mySlides" src="church.jpeg">
+		<img class="mySlides" src="bleh.jpeg">
+		<img class="mySlides" src="pexels-photo.jpg">
+		<img class="mySlides" src="students passtime.jpeg">
+		<img class="mySlides" src="girls_hostel.jpg">
+		<img class="mySlides" src="comp_labs.jpeg">
+		<img class="mySlides" src="events.jpeg">
+		<img class="mySlides" src="boys_hostel.jpg">
+		<img class="mySlides" src="alumni.jpeg">
+		<button class="btn" onclick="plusIndex(-1)" id="btn1">&#10094;</button>
+		<button class="btn" onclick="plusIndex(1)" id="btn2">&#10095;</button>
+	</div><br></center>
+<script>
+var index=1;
+function plusIndex(n){
+	index = index + n;
+	showImage(index);
+}
+showImage(1);
+function showImage(n){
+	var i;
+	var x=document.getElementsByClassName("mySlides");
+	if(n > x.length){ index = 1 };
+	if(n < 1){ index = x.length };
+	for(i=0;i<x.length;i++){
+		x[i].style.display="none";
+	}
+	x[index-1].style.display="block";
+}
+autoSlide();
+function autoSlide(){
+	var i;
+	var x=document.getElementsByClassName("mySlides");
+	for(i=0;i<x.length;i++){
+		x[i].style.display="none";
+	}
+	if(index>x.length){ index = 1 };
+	x[index-1].style.display="block";
+	index++;
+	setTimeout(autoSlide,3000);
+}
+function confirmlogout(){
+var a
+a=confirm("Are you sure you want to logout?");
+if(a){
+window.open("login (1).html");
+alert("You have logged out successfully!");
+}
+}
+</script>
+<br> <br>
+<div class="row"><center>
+<p style="float:center;margin-left:300px;color:#000;"> Presenting you glimpses from... </p><br><br>
+<h2 style="float:center;margin-left:300px;color:#000;"> THE PHOTOGRAPHY CLUB </h2> </center><br>
+	  <div class="column2">
+				<p id="a1" style="float:center;">
+			<img src="university_redwhite.jpeg" width="100%" height="400px">
+			 <br>
+	  </div>
+	  	  <div class="column2">
+				<p id="a1">
+			<img src="photoclub.jpeg" width="100%" height="400px">
+			 <br>
+	  </div>
+	  	  <div class="column2">
+				<p id="a1">
+			<img src="random.jpg" width="100%" height="400px">
+			 <br>
+	  </div>
+	  	  <div class="column2">
+				<p id="a1">
+			<img src="photoclub2.jpeg" width="100%" height="400px">
+			 <br>
+	  </div>
+	  </div>
+	  	  <div class="column2">
+				<p id="a1" style="margin-left:300px;">
+			<img src="photoclub1.jpeg" width="100%" height="400px">
+	  </div>
+<br>
+</div>
+ <div class="footer" style="margin-top:1600px;margin-left:100px;">
+    <p> &copy HOGWARTS</p>
+  </div>
+</body></html>
